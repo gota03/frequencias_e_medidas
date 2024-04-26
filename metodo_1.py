@@ -24,6 +24,6 @@ dist_freq_qualitativas = pd.DataFrame({"Frequencia": frequencia, "Porcentagem (%
 
 dist_freq_qualitativas.rename(index={0: "Masculino", 1: "Feminino"}, inplace=True) # o index altera a linha do DataFrame atraves de um dicionário, a linha que eu quero alterar e o seu novo nome, o inplace=True serve para dizer se vai modificar o DataFrame original ou se vai criar uma cópia modificada mas sem alterar o DataFrame original
  
-dist_freq_qualitativas.rename_axis("Sexo", axis="columns", inplace=False) # é usado para renomear o eixo de um DataFrame(coluna(columns)/linha(index)) O primeiro argumento do método rename_axis() é o novo nome do eixo. O segundo argumento é o eixo que está sendo renomeado. O terceiro argumento é um booleano que indica se o método deve ser executado na cópia do DataFrame ou no próprio DataFrame. No caso, o booleano está definido como True, então o método será executado no próprio DataFrame.
+dist_freq_qualitativas.rename_axis("Sexo", axis="columns", inplace=True) # é usado para renomear o eixo de um DataFrame(coluna(columns)/linha(index)) O primeiro argumento do método rename_axis() é o novo nome do eixo. O segundo argumento é o eixo que está sendo renomeado. O terceiro argumento é um booleano que indica se o método deve ser executado na cópia do DataFrame ou no próprio DataFrame. No caso, o booleano está definido como True, então o método será executado no próprio DataFrame.
 
 print(dist_freq_qualitativas)
